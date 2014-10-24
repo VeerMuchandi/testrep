@@ -23,6 +23,13 @@ echo "Creating PaasRefApp database now"
 #    echo
 #    echo "Schema not found!  Importing schema from .openshift/action_hooks/#PaaS_RefApp_DDL_DML.sql"
     echo
+i
+echo "Running PS"
+ps
+echo "running netstat"
+netstat
+
+
 
 sleep 60
 
