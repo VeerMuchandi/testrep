@@ -3,7 +3,8 @@
 # in this script.  This script gets executed directly, so it could be python,
 # php, ruby, etc.
 
-set -e
+#set -e
+set -x
 
 if [ -z $OPENSHIFT_MYSQL_DB_HOST ]
 then
@@ -21,6 +22,9 @@ fi
 #    echo
 #    echo "Schema not found!  Importing schema from .openshift/action_hooks/#PaaS_RefApp_DDL_DML.sql"
     echo
+
+sleep 60
+
     /usr/bin/mysql -v -v -v -u "$OPENSHIFT_MYSQL_DB_USERNAME" --password="$OPENSHIFT_MYSQL_DB_PASSWORD" -h "$OPENSHIFT_MYSQL_DB_HOST" "$OPENSHIFT_APP_NAME" < "$OPENSHIFT_REPO_DIR/.openshift/action_hooks/PaaS_RefApp_DDL_DML.sql"
     echo
     echo "done."
