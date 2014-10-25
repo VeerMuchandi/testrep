@@ -28,9 +28,8 @@ ps
 
 
 
-sleep 60
 
-    /usr/bin/mysql -v -v -v -u "$OPENSHIFT_MYSQL_DB_USERNAME" --password="$OPENSHIFT_MYSQL_DB_PASSWORD" -h "$OPENSHIFT_MYSQL_DB_HOST" "$OPENSHIFT_APP_NAME" < "$OPENSHIFT_REPO_DIR/.openshift/action_hooks/PaaS_RefApp_DDL_DML.sql"
+#    /usr/bin/mysql -v -v -v -u "$OPENSHIFT_MYSQL_DB_USERNAME" --password="$OPENSHIFT_MYSQL_DB_PASSWORD" -h "$OPENSHIFT_MYSQL_DB_HOST" "$OPENSHIFT_APP_NAME" < "$OPENSHIFT_REPO_DIR/.openshift/action_hooks/PaaS_RefApp_DDL_DML.sql"
     echo
     echo "done."
 #else
